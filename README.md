@@ -5,7 +5,7 @@ This was tested on RHEL8. Requires nbt2yaml https://pypi.org/project/nbt2yaml/.
 
 1) pip3 install nbt2yaml
 2) clone this repo to wherever
-3) Edit the playerdata dir variable
+3) Edit the playerdata dir variable and spawn location,
 4) Put it in your crontab for whatever time you think is appropreate. I like midnight revives. Use this if you're not familliar with adding crontab entires: https://crontab.guru/
 
 Why tho?
