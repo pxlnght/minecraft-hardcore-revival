@@ -17,14 +17,14 @@ survival_revival () {
     # Checks to see if gamemode is survial. Skips if it's already survival mode.
     if ! /usr/bin/grep -q 'playerGameType: 0' $working_file; then
         # Notification it's running.
-        echo "Running  survival revival for file $original_file"
+        echo "Running survival revival for file $original_file"
 
         # Sets gamemode to survival
         /usr/bin/sed -e 's/  - playerGameType: .*/  - playerGameType: 0/g' $working_file > deleteme_survivalset.txt
 
         # Remove player's current location
         /usr/bin/sed -e '/Pos/{n;N;N;d}' deleteme_survivalset.txt > deleteme_nocoords.txt
-        # Insert new location at xyz 0 60 0 
+        # Insert new location at xyz 0 60 0
         # Note the escape before the 4 spaces. Spacing is important for NBT.
         /usr/bin/sed -e '/Pos/a \    - !double "0"' \
                      -e '/Pos/a \    - !double "60"' \
@@ -47,7 +47,7 @@ survival_revival () {
 
         # Cleanup deleteme files.
         /usr/bin/rm -f deleteme*;
-        
+
     else
         # Notification it's not running.
         echo "Skipping survival revival for file $original_file"
@@ -58,7 +58,7 @@ main() {
 
     # Directory for playerdata
     playerdata_dir="/fio/files/nbtedit/playerdata"
-    
+
     # Create backups in-case we hurt ourselves later.
     # Backups are located in /var/tmp
     create_backups "$playerdata_dir"
