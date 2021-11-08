@@ -10,10 +10,10 @@ This was tested on RHEL8. Requires nbt2yaml https://pypi.org/project/nbt2yaml/.
 
 Why tho?
 
-1) You're unable to edit offline player's gamemodes.
+1) You're unable to edit offline player's gamemodes via the console or in game as op. 
 2) Manually setting players from spectator back to survival was annoying.
 3) It's possible to do this via a datapack, but I didn't feel like learning how datapacks work.
-4) This is super light weight in terms of resource usage. A datapack would cause more load on the server than this.
+4) This is super light weight in terms of resource usage. A datapack would cause more load on the server than this. From my very very quick glance at how datapacks work, it would need to be a per-tick check. 
 5) Just to flex, y'know?
 
 Notes:
